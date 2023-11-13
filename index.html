@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: #D0BFFF;
+}
+
+nav{
+  background-color: #BEADFA;
+}
+
+.navbar-smooth {
+  transition: background-color 0.3s, padding 0.3s;
+}
+
+#section1{
+  background-color: #D0BFFF;
+}
+
+#section1 p, h1, h2{
+  text-shadow: #2c80b7 3px 3px 3px;
+  color: white;
+}
+
+#section2{
+  background-color: #DFCCFB;
+}
+
+#section3{
+  background-color: #FFF8C9;
+}
+
+#section4{
+  background-color: #fffbde;
+}
+
+#konten{
+  display: flex;
+  flex-direction: row;
+}
+
+#img1{
+  margin: 0px 55px;
+}
+
+/* Keyframes untuk animasi progress bars */
+@keyframes fillProgressBar {
+  0% { width: 0; }
+}
+
+/* Gaya untuk progress bars */
+.progress-bar {
+  width: 0;
+  background-color: #3498db; /* Warna latar belakang progress bar */
+  animation: fillProgressBar 5s ease-in-out; /* Menggunakan animasi selama 2 detik */
+}
+
+/* Gaya untuk label */
+label {
+  font-weight: bold;
+}
+
+/* Gaya untuk container */
+.skillbar {
+  margin: 10px 0;
+  width: 95%;
+}
+
+
+.cardw{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  margin: 10px 20px;
+  text-align: center;
+}
+
+footer{
+  background: #D0BFFF;
+  margin: 0px;
+}
+
+.container{
+  width: 1140px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer{
+  width: 100%;
+}
+
+.footer-content{
+  color: white;
+  text-shadow: #2c80b7 3px 3px 3px;
+  margin: 40px 100px;
+}
+
+.footer-content a{
+  color: white;
+}
+
+.footer-content h3{
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-content p{
+  flex: 0 0 30%;
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+}
+
+.footer-content ul{
+  text-align: center;
+}
+
+.list{
+  padding: 0px;
+}
+
+.list li{
+  width: auto;
+  text-align: center;
+  list-style: none;
+  padding: 7px;
+  position: relative;
+}
+
+.list li::before{
+  content: '';
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 100%;
+  width: 0px;
+  height: 2px;
+  background: #BEADFA;
+  transition-duration: .5s;
+}
+
+.list li:hover::before{
+  width: 70px;
+}
+
+.social-icons{
+  text-align: center;
+  padding: 0;
+}
+
+.social-icons li{
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
+
+.social-icons i{
+  color: white;
+  font-size: 25px;
+}
+
+.list a{
+  text-decoration: none;
+}
+
+.list a:hover{
+  color: #BEADFA;
+}
+
+.social-icons i:hover{
+  color: #BEADFA;
+}
+
+.bottom-bar{
+  background: #BEADFA;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 50px;
+}
+
+.bottom-bar p{
+  color:#343434;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}
+
+@media only screen and (max-width: 768px) {
+  #konten{
+    display: flex;
+    flex-direction: column;
+    float: none;
+  }
+
+  #img1{
+    margin: 0px 95px;
+    width: 200px;
+    height: auto;
+  }
+
+  #t1{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 82.5px;
+  }
+
+  .cardw{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .footer-content{
+    margin: 40px 0px;
+  }
+
+  .footer-content p{
+    font-size: 12px;
+  }
+}
+
+</style>
+<body>
+    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">R n Fortofolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#section1">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section2">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            My
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#section3">Certificates</a></li>
+            <li><a class="dropdown-item" href="#section4">What i do?</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Costumer Web</a></li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</nav>
+<!-- Navbar -->
+
+<br>
+<br>
+
+<!-- Home -->
+<section id="section1">
+<div class="container1">
+  <div class="min-vh-100 text-left" id="konten">
+    <div class="col-6">
+      <img id="img1" src="https://i.pinimg.com/564x/a7/d5/60/a7d5600b108e4f5ec57df000d3f962d8.jpg" alt="none">
+    </div>
+    <div id="t1" class="col-6">
+      <p class="mb-1">Hello I'am</p>
+      <h1 class="fs-1 fw-bold">Web Designer</h1>
+      <h2 class="fs-4">Rasyad Helza</h2>
+      <p class="fs-6">I am a vocational school student, and I have mastered a little about web design and I am here to seek experience and knowledge for me to develop, please help in the future.</p>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Home -->
+
+<!-- About -->
+<section id="section2">
+
+  <br>
+  <br>
+
+  <h1 class="text-center fw-bold">About</h1>
+
+<div class="skill" id="skill">
+<p class="fs-5 text-muted text-center">My skill :</p>
+
+<center>
+  <div class="skillbar">
+    <label for="">HTML</label>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+  <div class="skillbar">
+    <label for="">CSS/Bootstrap</label>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+  <div class="skillbar">
+    <label for="">Javascript</label>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+  <div class="skillbar">
+    <label for="">PHP/MySql</label>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+<button type="button" class="btn btn-outline-dark">Download CV</button>
+</center>
+
+<br>
+<br>
+<br>
+
+</div>
+
+</section>
+<!-- About -->
+
+
+<!-- Certificates -->
+
+<section id="section3">
+
+<br>
+<br>
+  
+  <h1 class="text-center fw-bold">My Certificates</h1>
+
+<br>
+<br>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="asset/sertifikat1.jpg" class="d-block w-100" alt="..." height="auto">
+    </div>
+    <div class="carousel-item">
+      <img src="asset/sertifikat2.jpg" class="d-block w-100" alt="..." height="auto">
+    </div>
+    <div class="carousel-item">
+      <img src="asset/sertifikat3.jpg" class="d-block w-100" alt="..." height="auto">
+    </div>
+    <div class="carousel-item">
+      <img src="asset/sertifikat4.jpg" class="d-block w-100" alt="..." height="auto">
+    </div>
+    <div class="carousel-item">
+      <img src="asset/sertifikat5.jpg" class="d-block w-100" alt="..." height="auto">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<br>
+<br>
+<br>
+
+<!-- Certificates -->
+
+<!-- What I Do? -->
+
+<section id="section4">
+
+<br>
+<br>
+<br>
+
+<h1 class="text-center fw-bold">What i do?</h1>
+
+  <br>
+
+  <div class="cardw">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <i class="fa-solid fa-code fa-5x"></i><br><br>
+      <h5 class="card-title">Web Development</h5>
+      <p class="card-text">Can create static websites, dynamic websites, and responsive websites on desktop & mobile.</p>
+      <br>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <i class="fa-regular fa-lightbulb fa-5x"></i><br><br>
+      <h5 class="card-title">Creative Design</h5>
+      <p class="card-text">The design is simple and not excessive, but still has its own charm.</p>
+      <br><br>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <i class="fa-solid fa-user-gear fa-5x"></i><br><br>
+      <h5 class="card-title">Good Listener</h5>
+      <p class="card-text">accept suggestions and criticism from customers, to evaluate and correct my mistakes.</p>
+      <br>
+    </div>
+  </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</section>
+
+<!-- What I Do? -->
+
+
+<!-- Footer -->
+
+<footer id="section5">
+
+ <div class="container">
+   <div class="footer-content">
+      <h3>Contact Us</h3>
+      <p>Email : muhammadrasyad1004@gmail.com</p>
+      <p>Phone Number : 0895-3472-82709</p>
+      <p>Address : Cikaret, Gg.Emad</p>
+   </div>
+   <div class="footer-content">
+    <h3>Quick Links</h3>
+      <ul class="list">
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#section3">Certificates</a></li>
+        <li><a href="#section4">What i do?</a></li>
+      </ul>
+   </div>
+   <div class="footer-content">
+      <h3>Follow Us</h3>
+      <ul class="social-icons">
+        <li><a href="https://www.instagram.com/rasyadhelza_/"><i class="fa-brands fa-square-instagram"></i></a></li>
+        <li><a href="https://discordapp.com/users/856885005702791178"><i class="fa-brands fa-discord"></i></a></li>
+        <li><a href="https://wa.me/62895347282709"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+      </ul>
+   </div>
+ </div>
+    <div class="bottom-bar">
+      <p>&copy; 2023 your company. All right reversed</p>
+    </div>
+
+</footer>
+
+<!-- Footer -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
